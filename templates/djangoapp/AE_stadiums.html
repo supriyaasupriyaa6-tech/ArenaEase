@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | Our Venues</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ArenaEase</h1>
+        <h2>TESTING UPDATES</h2>
+        <p>Book the Arena. Own the Moment.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'availability' %}">Availability</a>
+        <a href="{% url 'booking' %}">Booking</a>
+        <a href="{% url 'facilities' %}">Facilities</a>
+        <a href="{% url 'policy' %}">Policies</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <section>
+        <div class="card">
+            <h2>M. Chinnaswamy Stadium</h2>
+            <p>Sports: Cricket, Football, Volleyball</p>
+            <button onclick="goToBooking('M. Chinnaswamy Stadium')">Proceed to Booking</button>
+        </div>
+
+        <div class="card">
+            <h2>City Indoor Stadium</h2>
+            <p>Sports: Badminton, Basketball, Tennis</p>
+            <button onclick="goToBooking('City Indoor Stadium')">Proceed to Booking</button>
+        </div>
+
+        <div class="card">
+            <h2>Emerald Football Turf</h2>
+            <p>Sports: Football</p>
+            <button onclick="goToBooking('Emerald Football Turf')">Proceed to Booking</button>
+        </div>
+
+        <div class="card">
+            <h2>Blue Wave Aquatic Center</h2>
+            <p>Sports: Swimming</p>
+            <button onclick="goToBooking('Blue Wave Aquatic Center')">Proceed to Booking</button>
+        </div>
+
+        <div class="card">
+            <h2>Titan Combat Arena</h2>
+            <p>Sports: MMA</p>
+            <button onclick="goToBooking('Titan Combat Arena')">Proceed to Booking</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ArenaEase</p>
+    </footer>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

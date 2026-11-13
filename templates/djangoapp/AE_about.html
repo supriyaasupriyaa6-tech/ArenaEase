@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | About Our Journey</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>ArenaEase</h1>
+        <p>Book the Arena. Own the Moment.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'availability' %}">Availability</a>
+        <a href="{% url 'booking' %}">Booking</a>
+        <a href="{% url 'facilities' %}">Facilities</a>
+        <a href="{% url 'policy' %}">Policies</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <section>
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>
+                ArenaEase was founded with a simple goal: to bridge the gap between sports enthusiasts 
+                and world-class facilities. We believe that booking a stadium should be as easy 
+                as playing the game itself.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Our History</h3>
+            <p>
+                The idea for ArenaEase was born in late 2025. We noticed that traditional booking 
+                methods were often manual and prone to scheduling conflicts. Starting as a small 
+                project to manage local cricket nets, we quickly realized the need for a unified platform 
+                for all sports.
+            </p>
+            <p>
+                By February 2026, we launched our first integrated module for <b>first-come, first-serve</b> 
+                slot management. Today, ArenaEase serves as a digital bridge for teams, 
+                coaches, and stadium administrators across Bengaluru.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Why We Stand Out</h3>
+            <div class="facilities-cards">
+                <div class="facility-card">
+                    <span class="icon">🏆</span>
+                    <p><b>Quality:</b> We only partner with stadiums that maintain international standards.</p>
+                </div>
+                <div class="facility-card">
+                    <span class="icon">⚖️</span>
+                    <p><b>Transparency:</b> No hidden bookings; our live status is open to all.</p>
+                </div>
+                <div class="facility-card">
+                    <span class="icon">🤝</span>
+                    <p><b>Community:</b> Built for the players, by the players.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ArenaEase</p>
+    </footer>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

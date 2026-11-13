@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ArenaEase | Finalize Booking</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+    <header><h1>Finalize Reservation</h1></header>
+    
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+    </nav>
+
+    <section>
+        <div class="card">
+            <h3>Reservation Summary</h3>
+            <p><b>Payment Method:</b> Pay at Venue (Cash)</p>
+            <hr>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 10px; border-left: 5px solid #27ae60;">
+                <p>By clicking confirm, you agree to pay the booking fee at the stadium counter before your game starts.</p>
+                <button onclick="finalizeCOD()" style="background-color: #27ae60; width: 100%; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                    Confirm & Finish
+                </button>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="goBack()" style="background-color: #7f8c8d; padding: 10px 20px; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                ← Go Back
+            </button>
+        </div>
+    </section>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

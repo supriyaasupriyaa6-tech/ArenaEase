@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | Refund & Cancellation Policy</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ArenaEase</h1>
+        <p>Book the Arena. Own the Moment.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'availability' %}">Availability</a>
+        <a href="{% url 'booking' %}">Booking</a>
+        <a href="{% url 'facilities' %}">Facilities</a>
+        <a href="{% url 'policy' %}">Policies</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <section class="policy-section">
+        <div class="card">
+            <h2>Refund & Cancellation Policy</h2>
+            <div class="policy-card">
+                <div class="policy-item">
+                    <span class="icon">&#128197;</span>
+                    <p><b>First-Come, First-Serve:</b> All bookings are confirmed on a first-come, first-serve basis.</p>
+                </div>
+                <div class="policy-item">
+                    <span class="icon">&#9200;</span>
+                    <p><b>24-Hour Payment Window:</b> Payment must be completed within 24 hours to secure your slot.</p>
+                </div>
+                <div class="policy-item">
+                    <span class="icon">&#128176;</span>
+                    <p><b>Full Refunds:</b> Full refunds are processed automatically for cancelled bookings.</p>
+                </div>
+            </div>
+            <p style="font-size: 14px; color: #555; margin-top: 10px;">
+                ⚠️ Please review your slot details carefully before confirming.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ArenaEase</p>
+    </footer>
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

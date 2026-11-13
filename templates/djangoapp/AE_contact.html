@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | Get in Touch</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>ArenaEase</h1>
+        <p>Book the Arena. Own the Moment.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'availability' %}">Availability</a>
+        <a href="{% url 'booking' %}">Booking</a>
+        <a href="{% url 'facilities' %}">Facilities</a>
+        <a href="{% url 'policy' %}">Policies</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <section>
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>Have questions about your booking or our venues? Our team is ready to assist you.</p>
+        </div>
+
+        <div class="facilities-cards">
+            <div class="facility-card">
+                <span class="icon">📧</span>
+                <div>
+                    <p><b>Email Support</b></p>
+                    <p>support@arenaease.com</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <span class="icon">📞</span>
+                <div>
+                    <p><b>Call Us</b></p>
+                    <p>+91 98***0***4</p>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <span class="icon">📍</span>
+                <div>
+                    <p><b>Visit Us</b></p>
+                    <p>Arenaease,JC Nagar,Bengaluru</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 30px;">
+            <h3>Working Hours</h3>
+            <p>Monday - Saturday: 6:00 AM to 11:00 PM</p>
+            <p>Sunday: 5:00 AM to 11:00 PM</p>
+            <p><i>Our support team is available during these hours to help with slot disputes or technical issues.</i></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ArenaEase</p>
+    </footer>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

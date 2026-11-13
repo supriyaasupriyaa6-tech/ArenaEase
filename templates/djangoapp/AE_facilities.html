@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | Facilities</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>ArenaEase</h1>
+        <p>Book the Arena. Own the Moment.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'availability' %}">Availability</a>
+        <a href="{% url 'booking' %}">Booking</a>
+        <a href="{% url 'facilities' %}">Facilities</a>
+        <a href="{% url 'policy' %}">Policies</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Stadium Facilities</h2>
+        <div class="facilities-cards">
+            <div class="facility-card">
+                <span class="icon">🚗</span>
+                <p><b>Parking:</b> Spacious parking for cars and bikes.</p>
+            </div>
+            <div class="facility-card">
+                <span class="icon">♿</span>
+                <p><b>Accessibility:</b> Wheelchair ramps and accessible seating.</p>
+            </div>
+            <div class="facility-card">
+                <span class="icon">🚿</span>
+                <p><b>Washrooms:</b> Clean and hygienic facilities.</p>
+            </div>
+            <div class="facility-card">
+                <span class="icon">💡</span>
+                <p><b>Flood Lights:</b> Professional lighting for night matches.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ArenaEase</p>
+    </footer>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

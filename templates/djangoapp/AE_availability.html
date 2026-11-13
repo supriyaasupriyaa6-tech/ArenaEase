@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | Check Availability</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ArenaEase</h1>
+        <p>Book the Arena. Own the Moment.</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <section>
+        <div style="margin-bottom: 20px;">
+            <button onclick="goBack()" style="background-color: #7f8c8d; width: auto; padding: 10px 20px; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                ← Back to Venues
+            </button>
+        </div>
+
+        <div class="card">
+            <h2 id="venueName">Check Availability</h2>
+            <ul id="dynamicSlotList" style="list-style: none; padding: 0;">
+                <li><span style="color: green;">●</span> All Slots Currently Available</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Reserve Your Slot</h3>
+            <form action="{% url 'process_booking' %}" method="POST">
+                {% csrf_token %} 
+                <label><b>Full Name:</b></label><br>
+                <input type="text" name="userName" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc;">
+                
+                <br>
+                <label><b>Email:</b></label><br>
+                <input type="email" name="userEmail" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+                <br>
+                <label><b>Select Sport:</b></label><br>
+                <select id="sportPicker" name="sportName" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px;"></select>
+
+                <br>
+                <label><b>Pick a Slot:</b></label><br>
+                <select name="slotTime" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px;">
+                    <option value="6:00 AM – 8:00 AM">6:00 AM – 8:00 AM</option>
+                    <option value="8:00 AM – 10:00 AM">8:00 AM – 10:00 AM</option>
+                    <option value="4:00 PM – 6:00 PM">4:00 PM – 6:00 PM</option>
+                    <option value="6:00 PM – 8:00 PM">6:00 PM – 8:00 PM</option>
+                </select>
+
+                <input type="hidden" name="stadiumName" id="hiddenStadiumName">
+
+                <br><br>
+                <button type="submit" style="width: 100%; background-color: #C0392B; color: white; padding: 12px; border: none; border-radius: 8px; cursor: pointer;">
+                    Reserve & Proceed
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

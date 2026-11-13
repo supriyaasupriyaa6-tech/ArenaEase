@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArenaEase | Venue Gallery</title>
+    <link rel="stylesheet" href="{% static 'djangoapp/css/AE_style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ArenaEase Gallery</h1>
+        <p>Explore our 30+ Premium Venues</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'stadiums' %}">Stadiums</a>
+        <a href="{% url 'availability' %}">Availability</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+    </nav>
+
+    <section>
+        <div class="card" style="text-align: center;">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('chinnaswamy')">Chinnaswamy</button>
+                <button class="filter-btn" onclick="filterGallery('indoor')">City Indoor</button>
+                <button class="filter-btn" onclick="filterGallery('turf')">Emerald Turf</button>
+                <button class="filter-btn" onclick="filterGallery('aqua')">Blue Wave</button>
+                <button class="filter-btn" onclick="filterGallery('combat')">Titan Arena</button>
+            </div>
+        </div>
+
+        <div class="gallery-container" id="galleryGrid">
+            
+            <div class="stadium-card chinnaswamy"><img src="https://cdn.shopify.com/s/files/1/0278/4565/6649/files/WhatsApp_Image_2023-10-01_at_01.33.43.webp?v=1696105387" class="stadium-img"><h3>Main Pitch</h3></div>
+            <div class="stadium-card chinnaswamy"><img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?w=600" class="stadium-img"><h3>Batsman View</h3></div>
+            <div class="stadium-card chinnaswamy"><img src="https://images.indianexpress.com/2025/12/Chinnaswamy-Stadium.jpg?w=1200" class="stadium-img"><h3>Night Lights</h3></div>
+            <div class="stadium-card chinnaswamy"><img src="https://c.ndtvimg.com/2025-05/ptgo93u_m-chinnaswamy-stadium-bengaluru-bcci_625x300_17_May_25.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" class="stadium-img"><h3>Stands & Crowd</h3></div>
+            <div class="stadium-card chinnaswamy"><img src="https://images.mid-day.com/images/images/sports/photos-virat-kohli-and-co-prepare-to-tame-australians-in-bangalore/ind9.jpg" class="stadium-img"><h3>Practice Nets</h3></div>
+            <div class="stadium-card chinnaswamy"><img src="https://www.livemint.com/lm-img/img/2024/10/21/optimize/Screenshot_2024-10-21_063352_1729472651021_1729472668242.png" class="stadium-img"><h3>Bowling End</h3></div>
+
+            <div class="stadium-card indoor"><img src="https://www.universalservicesuk.co.uk/client/uni/content/products/portable_badminton_courts-1735.jpg" class="stadium-img"><h3>Professional Badminton</h3></div>
+            <div class="stadium-card indoor"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600" class="stadium-img"><h3>Basketball Main Court</h3></div>
+            <div class="stadium-card indoor"><img src="https://www.rimonthly.com/content/uploads/2024/09/l/h/s24ec145cur-scaled.jpg" class="stadium-img"><h3>Tennis Pro Center</h3></div>
+            <div class="stadium-card indoor"><img src="https://static.vecteezy.com/system/resources/thumbnails/046/681/653/small_2x/sports-young-women-with-racket-and-shuttlecock-is-exercising-playing-in-badminton-on-inside-court-high-quality-photo.jpg" class="stadium-img"><h3>Shuttlecock Action</h3></div>
+            <div class="stadium-card indoor"><img src="https://thumbs.dreamstime.com/b/isometric-illustration-indoor-basketball-arena-full-stands-two-hoops-detailed-court-layout-modern-sports-hall-421558528.jpg" class="stadium-img"><h3>Hoop Detail</h3></div>
+            <div class="stadium-card indoor"><img src="https://zumba-classes.imgix.net/classes/f62ab928-ad7b-41b4-b811-3c1c5296c26e.jpeg" class="stadium-img"><h3>Multipurpose Hall</h3></div>
+
+            <div class="stadium-card turf"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600" class="stadium-img"><h3>Football Turf</h3></div>
+            <div class="stadium-card turf"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/20121216_PSG-ASSE_05_-_M%C3%A9line_G%C3%A9rard.jpg/250px-20121216_PSG-ASSE_05_-_M%C3%A9line_G%C3%A9rard.jpg" class="stadium-img"><h3>Goals</h3></div>
+            <div class="stadium-card turf"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_-1D3_Sudl4wK45jb6gII1rPjCU3U2ioE_g&s" class="stadium-img"><h3>Corner Flag View</h3></div>
+            <div class="stadium-card turf"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600" class="stadium-img"><h3>Night Floodlights</h3></div>
+            <div class="stadium-card turf"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJfBPiAZge7976U3EbJVwV6xpZdBkiCKMh_A&s" class="stadium-img"><h3>Training Drills</h3></div>
+            <div class="stadium-card turf"><img src="https://i.ytimg.com/vi/rJg9wOQ7Qtg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA9y0AuLa5fdvROSo15ePp5zvGl0A" class="stadium-img"><h3>Surface Detail</h3></div>
+
+            <div class="stadium-card aqua"><img src="https://www.fluidra.com/wp-content/uploads/2022/07/1018_Fl.2012.jpg" class="stadium-img"><h3>Olympic Main Pool</h3></div>
+            <div class="stadium-card aqua"><img src="https://t3.ftcdn.net/jpg/05/66/92/68/360_F_566926890_X9jvHVswwTcdSZRSmFqYfMQyvhwnOzvy.jpg" class="stadium-img"><h3>Diving Boards</h3></div>
+            <div class="stadium-card aqua"><img src="https://st5.depositphotos.com/42611274/64197/i/450/depositphotos_641977710-stock-photo-swimming-pool-lane-markers.jpg" class="stadium-img"><h3>Swim Lane Markers</h3></div>
+            <div class="stadium-card aqua"><img src="https://thebridge.in/h-upload/2025/10/09/63757-updated-copy-of-live-blog-4.webp" class="stadium-img"><h3>Water Polo Arena</h3></div>
+            <div class="stadium-card aqua"><img src="https://content3.jdmagicbox.com/v2/comp/mangalore/a4/0824px824.x824.230423044102.s4a4/catalogue/olympic-level-swimming-pool-yemmekere-mangalore-swimming-pools-58vz9zo4k5.jpg" class="stadium-img"><h3>Poolside Seating</h3></div>
+            <div class="stadium-card aqua"><img src="https://www.shape.com/thmb/bPJ8BhLI5kKUX3Hg2VUSbgFNofU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/intermediate-swimming-workout-pool-31fd907cf61a435d9791e00b64da5189.jpg" class="stadium-img"><h3>Training Lap View</h3></div>
+
+            <div class="stadium-card combat"><img src="https://5.imimg.com/data5/SELLER/Default/2022/8/HB/NH/JU/35797192/mma-cage.jpg" class="stadium-img"><h3>Professional Octagon</h3></div>
+            <div class="stadium-card combat"><img src="https://thesportsroom.in/wp-content/uploads/2023/11/SAI-Indoor-Hall-1024x619.jpg" class="stadium-img"><h3>Main Boxing Ring</h3></div>
+            <div class="stadium-card combat"><img src="https://5.imimg.com/data5/OU/KE/FO/SELLER-2751211/wrestling-cover-mats.jpeg" class="stadium-img"><h3>Wrestling Mats</h3></div>
+            <div class="stadium-card combat"><img src="https://thumbs.dreamstime.com/b/female-boxer-training-gym-afro-american-male-box-92666792.jpg" class="stadium-img"><h3>Heavy Bag Training</h3></div>
+            <div class="stadium-card combat"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600" class="stadium-img"><h3>Combat Floor</h3></div>
+        
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ArenaEase</p>
+    </footer>
+
+    <script src="{% static 'djangoapp/js/AE_script.js' %}"></script>
+</body>
+</html>

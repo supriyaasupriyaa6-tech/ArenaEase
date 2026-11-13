@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap');
+
+/* Red Color Palette */
+:root {
+    --red-dark: #8B1E3F;
+    --red-main: #C0392B;
+    --text-dark: #2C2C2C;
+    --card-bg: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FFF5F5, #FDEDEC);
+    color: var(--text-dark);
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--red-dark), var(--red-main));
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; font-size: 38px; letter-spacing: 1.2px; }
+header p { margin: 5px 0 0; font-size: 16px; opacity: 0.9; }
+
+/* Navigation */
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: var(--red-dark);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+nav a:hover { background: var(--red-main); color: white; }
+
+/* Section & Cards */
+section { max-width: 1200px; margin: auto; padding: 30px 20px; }
+
+.card {
+    background: var(--card-bg);
+    border-left: 6px solid var(--red-main);
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* --- GALLERY GRID FIXES --- */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.stadium-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+/* THE FIX: Prevents overlapping and leaves no gaps */
+.stadium-card.hidden { display: none !important; }
+
+.stadium-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--red-main);
+}
+
+.stadium-card h3 {
+    font-size: 16px;
+    padding: 12px;
+    margin: 0;
+    text-align: center;
+    color: var(--red-dark);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: #fdf2f2;
+    color: var(--red-main);
+    border: 1px solid var(--red-main);
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filter-btn.active { background: var(--red-main); color: white; }
+
+footer {
+    background: linear-gradient(90deg, var(--red-dark), var(--red-main));
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 60px;
+}
+
+/* General Button Style for the whole project */
+button {
+    background: var(--red-main);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(192, 57, 43, 0.2);
+}
+
+button:hover {
+    background: var(--red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(139, 30, 63, 0.3);
+}
